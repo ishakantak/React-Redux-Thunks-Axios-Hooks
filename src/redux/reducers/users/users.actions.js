@@ -6,7 +6,7 @@ const usersLoadStart = () => ({
 
 const usersLoadSuccess = (users) => ({
 	type: actionTypes.USERS_LOAD_SUCCESS,
-	payload: users,
+	payload: posts,
 });
 
 const usersLoadError = (errorMessage) => ({

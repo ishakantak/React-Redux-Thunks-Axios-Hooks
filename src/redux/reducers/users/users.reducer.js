@@ -7,7 +7,7 @@ const usersReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				isLoading: true,
-				users: null,
+				posts: null,
 				errorMessage: null,
 			};
 
@@ -15,7 +15,7 @@ const usersReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				isLoading: false,
-				users: payload,
+				posts: payload,
 			};
 
 		case actionTypes.USERS_LOAD_ERROR:

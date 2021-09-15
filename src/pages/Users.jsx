@@ -4,7 +4,7 @@ import { loadUsersAsync } from "../redux/reducers/users/users.thunks";
 
 const UserListing = () => {
 	const dispatch = useDispatch();
-	const { isLoading, users, errorMessage } = useSelector((state) => state.users);
+	const { isLoading, posts, errorMessage } = useSelector((state) => state.posts);
 
 	useEffect(() => {
 		dispatch(loadUsersAsync());
@@ -15,7 +15,7 @@ const UserListing = () => {
 			<h1>User Listing</h1>
 			{isLoading && <h3>Loading...</h3>}
 			{errorMessage && <h3>{errorMessage}</h3>}
-			{users && users.map((user) => <h5 key={user.id}>{user.name}</h5>)}
+			{posts && posts.map((user) => <h5 key={user.id}>{user.title}</h5>)}
 		</div>
 	);
 };

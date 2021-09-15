@@ -3,7 +3,7 @@ import usersReducer from "./users/users.reducer";
 
 const rootReducer = () =>
 	combineReducers({
-		users: usersReducer,
+		posts: usersReducer,
 	});
 
 export default rootReducer;
